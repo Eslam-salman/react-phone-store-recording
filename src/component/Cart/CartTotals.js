@@ -7,7 +7,7 @@ export default function CartTotals(Props){
     const history=Props.history;
    return(
        <React.Fragment>
-           <div className="container">
+           <div className="container py-5">
                <div className="row">
                    <div className="col-10 mt-2 ml-sm-5 ml-md-auto text-capitalize text-right">
                        <Link to='/'>

@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
-import {storeProducts,detailProduct} from './data';
+import {storeProducts,detailProduct,blog} from './data';
 const ProviderContext=React.createContext();
 
   class ProductProvider extends Component{
     state={
        Products:[],
         detailProduct:detailProduct,
+        Blogs:[],
         cart:[],
         modelopen:false,
         modelprodact:detailProduct,
@@ -17,6 +18,7 @@ const ProviderContext=React.createContext();
     };
     componentDidMount(){
         this.setProduct();
+        this.setBlog();
         console.log(this.state.Products);
     }
     setProduct=()=>{
@@ -28,6 +30,15 @@ const ProviderContext=React.createContext();
            Products:tempProduct
         });
     };
+    setBlog=()=>{
+      let tempBlog=[];
+      blog.forEach(item =>{
+        tempBlog.push(item);
+      });
+      this.setState({
+        Blogs:tempBlog
+      });
+  };
    
     getProduct=(id)=>{
       const details=this.state.Products.find(item=>item.id===id );

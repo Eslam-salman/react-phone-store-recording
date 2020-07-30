@@ -10,6 +10,8 @@ class Cart extends Component{
     render(){
         return(
             <section>
+                <div className="py-5">
+                   <div className="container">
                 <ProductConsumer>
                     {value=>{
                         const{cart}=value.obj;
@@ -32,7 +34,7 @@ class Cart extends Component{
                     }}
                 </ProductConsumer>
                 
-
+                </div></div>
             </section>
         )
     }
