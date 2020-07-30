@@ -15,9 +15,10 @@ class BlogList extends Component{
                                {value=>{
                                    console.log(value.obj.Blogs)
                                 return value.obj.Blogs.map(items=>{
-                                       return < Blog key={items.id} item={items}/>;
-                                        if(items.id<4)
-                                        {  return < Blog key={items.id} item={items}/>;}
+                                    if(items.id<4)
+                                        { return < Blog key={items.id} item={items}/>;}
+                                        
+                                     
                                    });
 
                                }}
